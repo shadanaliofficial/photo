@@ -1,0 +1,68 @@
+.services {
+  background: #fff;
+  padding: 80px 40px 90px;
+}
+
+.services__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.services__heading {
+  font-family: "Gilda Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  text-align: center;
+  color: #2d2d2d;
+  margin-bottom: 70px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.services__grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.serviceCard {
+  flex: 1;
+  max-width: 220px;
+  text-align: center;
+}
+
+.serviceCard__title {
+  font-family: "Gilda Display", serif;
+  font-size: 26px;
+  line-height: 1.35;
+  font-weight: 400;  /* KEEP at 500 - WordPress uses this */
+  color: #4d504a;
+  margin-bottom: 16px;
+  /* THE MAGIC - ADD THESE TWO LINES */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.serviceCard__desc {
+  font-family: "MADE Mirage", serif;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #818181;
+  /* ADD THESE TWO LINES */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 900px) {
+  .services__grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .serviceCard {
+    max-width: 260px;
+  }
+}

@@ -1,0 +1,377 @@
+/* ===============================
+   PORTFOLIO HERO SECTION
+   =============================== */
+
+.portfolio-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.portfolio-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-hero__title {
+  font-family: "MADE Mirage", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 3px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .portfolio-hero {
+    height: 60vh;
+  }
+}
+
+/* Portfolio Preview Section */
+.portfolio-preview-section {
+  background-color: #fff;
+  padding: 80px 20px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-preview-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Portfolio Title */
+.portfolio-title {
+  font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', serif;
+  font-size: 56px;
+  font-weight: 400;
+  text-align: center;
+  color: #2c2c2c;
+  margin-bottom: 80px;
+  letter-spacing: 2px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin-bottom: 80px;
+  padding: 0 40px;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+}
+
+/* =========================
+   FRAME - Borders on LEFT side, image on RIGHT
+   ========================= */
+.portfolio-card__frame {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto 30px;
+  padding-top: 0px;
+  padding-left: 12px; /* Padding on LEFT side */
+  box-sizing: border-box;
+}
+
+/* Two gold arch border lines via ::before ::after */
+/* They sit BEHIND the image (z-index 1) */
+/* Shifted LEFT + UP so borders appear on LEFT side */
+/* Image overlaps them from the RIGHT */
+/* BORDERS CONNECT AT BOTTOM */
+.portfolio-card__frame::before,
+.portfolio-card__frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #b8966e;
+  border-radius: 999px 999px 0 0; /* Borders connect at bottom */
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Outer border — shifted to LEFT */
+.portfolio-card__frame::before {
+  transform: translate(-22px, -18px); /* Negative X = LEFT, Negative Y = UP */
+}
+
+/* Inner border — shifted to LEFT (less offset) */
+.portfolio-card__frame::after {
+  transform: translate(-12px, -9px); /* Negative X = LEFT, Negative Y = UP */
+  border-width: 1.5px;
+}
+
+/* =========================
+   ARCH — clips image into dome, sits above borders
+   ========================= */
+.portfolio-card__arch {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 999px 999px 0 0;
+  background: #fff;
+  width: 100%;
+  margin-top: 1px; /* Move image DOWN */
+  margin-left: -10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+/* Portfolio Content */
+.portfolio-content {
+  text-align: center;
+  padding: 0 20px;
+  max-width: 380px;
+}
+
+.couple-name {
+  font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.wedding-subtitle {
+  font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #5a5a5a;
+  line-height: 1.6;
+  margin: 4px 0;
+  letter-spacing: 0.5px;
+}
+
+/* View Details Button */
+.view-details-btn {
+  margin-top: 24px;
+  padding: 14px 42px;
+  background-color: transparent;
+  border: 1.5px solid #a88b65;
+  color: #6b5d4f;
+  font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-details-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #a88b65;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.view-details-btn:hover::before {
+  left: 0;
+}
+
+.view-details-btn:hover {
+  color: #fff;
+  border-color: #a88b65;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 139, 101, 0.3);
+}
+
+/* See More Button */
+.see-more-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 50px;
+  background-color: #a88b65;
+  color: #fff;
+  font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  text-align: center;
+  max-width: 200px;
+  box-shadow: 0 4px 15px rgba(168, 139, 101, 0.2);
+}
+
+.see-more-btn:hover {
+  background-color: #8f7555;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(168, 139, 101, 0.35);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .portfolio-card__frame {
+    max-width: 300px;
+  }
+
+  .portfolio-image {
+    height: 400px;
+  }
+
+  .portfolio-title {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+
+  .couple-name {
+    font-size: 28px;
+  }
+
+  .wedding-subtitle {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .portfolio-preview-section {
+    padding: 60px 20px 80px;
+  }
+
+  .portfolio-title {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 0;
+  }
+
+  .portfolio-card__frame {
+    max-width: 350px;
+  }
+
+  .portfolio-image {
+    height: 450px;
+  }
+
+  .couple-name {
+    font-size: 30px;
+  }
+
+  .wedding-subtitle {
+    font-size: 16px;
+  }
+
+  .view-details-btn {
+    padding: 12px 36px;
+    font-size: 17px;
+  }
+
+  .see-more-btn {
+    padding: 14px 45px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 36px;
+  }
+
+  .portfolio-card__frame {
+    max-width: 100%;
+  }
+
+  .couple-name {
+    font-size: 26px;
+  }
+
+  .wedding-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.view-details-btn {
+  display: inline-block;
+  text-decoration: none;
+}

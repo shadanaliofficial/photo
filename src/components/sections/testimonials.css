@@ -1,0 +1,254 @@
+/* =========================
+   TESTIMONIALS SECTION
+   ========================= */
+
+.testimonials {
+  padding: 90px 20px 0px;
+  background: #e9e2d9;
+}
+
+.testimonials__heading {
+  font-family: "Gilda Display", serif;
+  font-size: 42px;
+  font-weight: 300;
+  text-align: center;
+  color: #2d2d2d;
+  margin-bottom: 70px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.testimonials__container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* =========================
+   LEFT ARCH IMAGE (SAME STYLE AS PORTFOLIO)
+   ========================= */
+
+.testimonialsArch__frame {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+
+  padding-top: 28px; /* image under borders */
+  padding-left: 8px;
+}
+
+/* outline borders */
+.testimonialsArch__frame::before,
+.testimonialsArch__frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border: 2px solid rgba(146, 111, 72, 0.65);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+
+  pointer-events: none;
+  z-index: 0; /* borders on top */
+}
+
+.testimonialsArch__frame::before {
+  transform: translate(-24px, 20px);
+}
+.testimonialsArch__frame::after {
+  transform: translate(-12px, 10px);
+}
+
+.testimonialsArch__arch {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 999px 999px 0 0;
+  background: #fff;
+}
+
+.testimonialsArch__arch img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   RIGHT CONTENT BOX
+   ========================= */
+
+.testimonialsBox {
+  background: #eef0ec; /* ✅ same tint like WP */
+  padding: 70px 55px;
+  text-align: center;
+
+  min-height: 520px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonialsBox__date {
+  font-family: "MADE Mirage", serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 22px;
+}
+
+.testimonialsBox__title {
+  font-family: "Gilda Display", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #2d2d2d;
+
+  max-width: 600px;
+  margin: 0 auto 22px auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.testimonialsBox__text {
+  font-family: "Gilda Display", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.95;
+  color: rgba(0, 0, 0, 0.5);
+
+  max-width: 680px;
+  margin: 0 auto 34px auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.testimonialsBox__name {
+  font-family: "Gilda Display", serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 60px;
+}
+
+/* =========================
+   DOTS (3 HOLES)
+   ========================= */
+
+.testimonialsDots {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.testimonialsDots__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: transparent;
+
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.testimonialsDots__dot.is-active {
+  background: rgba(0, 0, 0, 0.35); /* ✅ active filled dot */
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1100px) {
+  .testimonials__container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .testimonialsBox {
+    min-height: auto;
+    padding: 55px 22px;
+  }
+
+  .testimonials__heading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .testimonials {
+    padding: 60px 16px 0;
+  }
+
+  .testimonials__heading {
+    font-size: 30px;
+    margin-bottom: 45px;
+  }
+
+  .testimonials__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* ===== ARCH IMAGE ===== */
+
+  .testimonialsArch__frame {
+    max-width: 260px;   /* smaller arch */
+    padding-top: 18px;
+    padding-left: 6px;
+  }
+
+  .testimonialsArch__frame::before {
+    transform: translate(-14px, 14px);
+  }
+
+  .testimonialsArch__frame::after {
+    transform: translate(-8px, 8px);
+  }
+
+  .testimonialsArch__arch img {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* ===== CONTENT BOX ===== */
+
+  .testimonialsBox {
+    padding: 40px 18px;
+    min-height: auto;
+  }
+
+  .testimonialsBox__title {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .testimonialsBox__text {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .testimonialsBox__name {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+
+  .testimonialsDots {
+    gap: 12px;
+  }
+
+  .testimonialsDots__dot {
+    width: 14px;
+    height: 14px;
+  }
+}

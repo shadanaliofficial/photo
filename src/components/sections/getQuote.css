@@ -1,0 +1,49 @@
+/* =========================
+   GET QUOTE STRIP
+   ========================= */
+
+.getQuote {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+
+  /* ✅ no gap from top */
+  padding: 0 20px;
+
+  /* ✅ elongate section */
+  min-height: 280px; /* change 280 -> 320 if you want more */
+
+  display: flex;
+  align-items: center;   /* ✅ vertical center */
+  justify-content: center;
+
+  background: #fff;
+  overflow: hidden;
+
+  margin: 0;
+}
+
+
+/* background pattern with opacity (like WP) */
+.getQuote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image: var(--quote-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.18; /* ✅ adjust if needed */
+  pointer-events: none;
+}
+
+/* button sizing like WP */
+.getQuote__btn {
+  padding: 14px 44px;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+}

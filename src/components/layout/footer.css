@@ -1,0 +1,253 @@
+/* =========================
+   FOOTER (GLOBAL)
+   ========================= */
+
+.footer {
+  width: 100%;
+  background: #e9e2d9;
+}
+
+/* =========================
+   INSTAGRAM SECTION
+   ========================= */
+
+.footerInsta {
+  position: relative;
+  padding: 70px 0 30px;
+  background: #e9e2d9;
+}
+
+.footerInsta__head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footerInsta__title {
+  font-family: "Gilda Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+}
+
+.footerInsta__handle {
+  font-family: "MADE Mirage", serif;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+}
+
+.footerInsta__handle:hover {
+  text-decoration: underline;
+}
+
+/* slider wrapper */
+.footerInsta__slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* infinite continuous movement */
+.footerInsta__track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: instaScroll 90s linear infinite;
+  will-change: transform;
+}
+
+/* pause on hover */
+.footerInsta__slider:hover .footerInsta__track {
+  animation-play-state: paused;
+}
+
+@keyframes instaScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* slide */
+.footerInsta__slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: 320px;
+  height: 450px;
+  overflow: hidden;
+  display: block;
+  background: #fff;
+}
+
+.footerInsta__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.footerInsta__slide:hover img {
+  transform: scale(1.04);
+}
+
+/* overlay */
+.footerInsta__overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.footerInsta__slide:hover .footerInsta__overlay {
+  opacity: 1;
+}
+
+/* instagram icon */
+.footerInsta__igIcon {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* =========================
+   ARROWS
+   ========================= */
+
+.footerInsta__arrows {
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+  margin-top: 18px;
+}
+
+.instaArrow {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.instaArrow:hover {
+  color: rgba(0, 0, 0, 0.75);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   MAIN FOOTER
+   ========================= */
+
+.footerMain {
+  padding: 20px 20px 18px;
+  background: #f2ece4;
+}
+
+.footerMain__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Social icons */
+.footerMain__social {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 25px;
+}
+
+.socialIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: rgba(0, 0, 0, 0.75);
+  transition: transform 0.25s ease, color 0.25s ease;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.socialIcon:hover {
+  transform: translateY(-2px);
+}
+
+.socialIcon--facebook:hover {
+  color: #1877f2;
+}
+
+.socialIcon--youtube:hover {
+  color: #ff0000;
+}
+
+.socialIcon--whatsapp:hover {
+  color: #25d366;
+}
+
+.socialIcon--instagram:hover {
+  color: #e1306c;
+}
+
+/* Nav */
+.footerMain__nav {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 25px;
+}
+
+.footerMain__nav a {
+  font-family: "MADE Mirage", serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: none;
+}
+
+.footerMain__nav a:hover {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* copyright */
+.footerMain__copy {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .footerInsta__title {
+    font-size: 36px;
+  }
+
+  .footerMain__nav {
+    gap: 18px;          /* reduce spacing */
+    flex-wrap: nowrap;  /* force single line */
+    overflow-x: auto;   /* allow horizontal scroll if needed */
+    white-space: nowrap;
+    justify-content: center;
+  }
+
+  .footerMain__nav a {
+    font-size: 18px;    /* slightly smaller so they fit */
+  }
+
+  .footerInsta__slide {
+    width: 210px;
+    height: 280px;
+  }
+}

@@ -1,0 +1,228 @@
+/* ===============================
+   CONTACT HERO SECTION
+   =============================== */
+
+.contact-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 300px;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.contact-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+}
+
+.contact-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-hero__title {
+  font-family: "Gilda Display", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 3px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-hero {
+    height: 35vh;
+  }
+}
+
+.contactWrap {
+  background: #e9e2d9;
+  padding: 100px 20px 140px;
+  text-align: center;
+}
+
+/* TITLE */
+
+.contactTitle {
+  font-family: "Gilda Display", serif;
+  font-size: 58px;
+  font-weight: 400;
+  color: #2d2d2d;
+  margin-bottom: 35px;
+}
+
+/* TEXT */
+
+.contactText h2 {
+  font-family: "Gilda Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: rgba(0,0,0,.65);
+}
+
+.contactText p {
+  font-family: "Gilda Display", serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.5;
+  color: #2d2d2d;
+  max-width: 760px;
+  margin: 0 auto 0px;
+}
+
+.contactMeta {
+  margin-top: 26px;
+}
+
+.contactMeta span {
+  display: block;
+  font-family: "Gilda Display", serif;
+  color: #2d2d2d;
+  margin-bottom: 6px;
+}
+
+/* FORM CARD */
+
+.formOuter {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.contactForm {
+  background: #fff;
+  width: 720px;
+  padding: 65px;
+  border-radius: 18px;
+  text-align: left;
+}
+
+/* LABELS */
+
+.contactForm label,
+.serviceTitle {
+  font-family: "Gilda Display", serif;
+  font-size: 15px;
+  color: rgba(0,0,0,.6);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* INPUTS */
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1px solid rgba(0,0,0,.25);
+  margin-bottom: 28px;
+  font-family: "Gilda Display", serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.contactForm textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* RADIO */
+
+.radioRow label {
+  display: block;
+  font-family: "Gilda Display", serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: rgba(0,0,0,.5);
+}
+
+/* BUTTON */
+
+.contactForm button {
+  margin-top: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 34px;
+  font-family: "Gilda Display", serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.serviceOptions {
+  margin-top: 18px;
+}
+
+.serviceOption {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+  margin-bottom: 22px;
+
+  font-family: "Gilda Display", serif;
+  font-size: 20px;
+  color: rgba(0,0,0,0.55);
+
+  cursor: pointer;
+}
+
+/* clean radio look */
+.serviceOption input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+
+/* ===============================
+   MOBILE FORM WIDTH FIX
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .formOuter {
+    padding: 0 16px; /* small safe side spacing */
+  }
+
+  .contactForm {
+    width: 100%;      /* full width */
+    max-width: 100%;
+    padding: 32px 22px;  /* reduce side padding so inputs feel wider */
+  }
+
+}
+
+/* ===============================
+   MOBILE WIDTH ENHANCEMENT
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .contactWrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .formOuter {
+    margin-top: 60px;
+  }
+
+  .contactForm {
+    width: 100%;
+    max-width: 100%;
+    padding: 32px 20px;   /* slightly tighter side padding */
+    border-radius: 16px;
+  }
+
+}

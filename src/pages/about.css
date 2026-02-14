@@ -1,0 +1,289 @@
+/* =========================
+   HERO SECTION
+   ========================= */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 300px;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.about-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+}
+
+.about-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero__title {
+  font-family: "MADE Mirage", serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 3px;
+}
+
+/* Mobile - Hero */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 35vh;
+  }
+}
+
+/* =========================
+   DOOR REVEAL
+   ========================= */
+.doorReveal {
+  position: relative;
+  padding: 0;
+  background: #f6f1ea;
+  overflow: visible;
+}
+
+/* =========================
+   DOOR ZONE - Only for content section
+   ========================= */
+.doorZone {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+/* =========================
+   DOORS
+   ========================= */
+.door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 3;
+  will-change: transform;
+  transition: transform 12s cubic-bezier(0.22, 0.61, 0.36, 1); /* ← BACK TO 12s SLOW */
+}
+
+.door img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.door--left {
+  left: 0;
+  transform: translateX(0);
+}
+
+.door--right {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* =========================
+   OPEN STATE (triggered when centered)
+   ========================= */
+.doorReveal.open .door--left {
+  transform: translateX(-110%);
+}
+
+.doorReveal.open .door--right {
+  transform: translateX(110%);
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+.doorContent {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 120px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 12s cubic-bezier(0.22, 0.61, 0.36, 1); /* ← BACK TO 12s SLOW */
+}
+
+.doorReveal.open .doorContent {
+  opacity: 1;
+}
+
+/* =========================
+   TEXT BLOCKS
+   ========================= */
+.aboutBlock h2 {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-size: 46px;
+  margin-bottom: 28px;
+  color: #2d2d2d;
+}
+
+.aboutBlock p {
+  font-family: "Gilda Display", sans-serif;
+  line-height: 1.9;
+  font-size: 18px;
+  color: #2d2d2d;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   AWARDS - Outside door zone
+   ========================= */
+.awardBlock {
+  margin: 40px auto 0;
+  text-align: center;
+  padding: 60px 20px 120px;
+  position: relative;
+  z-index: 0;
+}
+
+.awardBlock h3 {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #2d2d2d;
+}
+
+.awardBlock img {
+  width: 240px;
+}
+
+/* =========================
+   FAQ
+   ========================= */
+.faqSection {
+  max-width: 1100px;
+  margin: 180px auto;
+  padding: 0 20px;
+}
+
+.faqTitle {
+  font-family: "Gilda Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 70px;
+  color: #2d2d2d;
+}
+
+.faqItem {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  padding-left: 10px;
+}
+
+.faqQuestion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.faqArrow {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  display: inline-block;
+  transform: rotate(0deg);
+}
+
+.faqArrow.open {
+  transform: rotate(90deg);
+}
+
+.faqItem h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #2d2d2d;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.faqItem:hover h3 {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.faqItem p {
+  font-family: "Gilda Display", serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #2f2f2f;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  margin-left: 30px;
+}
+
+.faqItem.open p {
+  max-height: 220px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 900px) {
+  .doorZone {
+    height: 70vh;
+    margin-top: 0;
+  }
+
+  .door {
+    transition: transform 10s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .doorContent {
+    padding-top: 100px;
+    transition: opacity 10s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .aboutBlock h2 {
+    font-size: 38px;
+  }
+
+  .awardBlock {
+    margin-top: 60px;
+    padding: 60px 20px 80px;
+  }
+
+  .awardBlock h3 {
+    font-size: 30px;
+  }
+
+  .awardBlock img {
+    width: 180px;
+  }
+
+  .faqItem h3 {
+    font-size: 24px;
+  }
+
+  .faqArrow {
+    font-size: 16px;
+  }
+
+  .faqItem p {
+    margin-left: 28px;
+  }
+}

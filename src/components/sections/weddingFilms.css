@@ -1,0 +1,248 @@
+/* =========================
+   WEDDING FILMS SECTION
+   ========================= */
+.wedding-films {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #f5f0e8;
+}
+
+.wedding-films__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+   ========================= */
+.wedding-films__heading {
+  font-family: 'Gilda Display', serif;
+  font-size: 42px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #2d2d2d;
+  letter-spacing: 0.5px;
+   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   GRID LAYOUT
+   ========================= */
+.wedding-films__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* =========================
+   VIDEO THUMBNAIL ITEM
+   ========================= */
+.wedding-films__item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0;
+  background-color: #000;
+}
+
+.wedding-films__thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.wedding-films__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.wedding-films__thumbnail:hover .wedding-films__image {
+  transform: scale(1.05);
+}
+
+/* =========================
+   PLAY BUTTON
+   ========================= */
+.wedding-films__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  padding: 0;
+}
+
+.wedding-films__play-button:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.wedding-films__play-icon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+/* =========================
+   VIDEO MODAL/POPUP
+   ========================= */
+.wedding-films__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.wedding-films__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.2s ease;
+  padding: 0;
+}
+
+.wedding-films__close-button:hover {
+  transform: scale(1.1);
+}
+
+.wedding-films__close-icon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Video Wrapper */
+.wedding-films__video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+}
+
+.wedding-films__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .wedding-films {
+    padding: 60px 20px;
+  }
+
+  .wedding-films__heading {
+    font-size: 38px;
+    margin-bottom: 40px;
+  }
+
+  .wedding-films__grid {
+    gap: 25px;
+  }
+
+  .wedding-films__play-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .wedding-films__video-wrapper {
+    max-width: 900px;
+  }
+}
+
+/* Mobile - 1 per row */
+@media (max-width: 768px) {
+  .wedding-films {
+    padding: 40px 15px;
+  }
+
+  .wedding-films__heading {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .wedding-films__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .wedding-films__play-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .wedding-films__close-button {
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .wedding-films__modal {
+    padding: 60px 15px 15px;
+  }
+
+  .wedding-films__video-wrapper {
+    max-width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .wedding-films {
+    padding: 30px 10px;
+  }
+
+  .wedding-films__grid {
+    gap: 15px;
+  }
+
+  .wedding-films__play-button {
+    width: 35px;
+    height: 35px;
+  }
+}

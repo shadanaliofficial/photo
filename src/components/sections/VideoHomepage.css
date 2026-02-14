@@ -1,0 +1,191 @@
+/* =========================
+   VIDEO HOMEPAGE SECTION
+   ========================= */
+.video-homepage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f0e8;
+  overflow: hidden;
+  padding: 0;
+}
+
+.video-homepage__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* =========================
+   VIDEO WRAPPER - Angled Shape
+   ========================= */
+.video-homepage__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  /* ANGLED EDGES - This creates the slanted top and bottom */
+  clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0 100%);
+  background-color: #000;
+}
+
+/* =========================
+   VIDEO ELEMENTS - Stacked
+   ========================= */
+.video-homepage__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  will-change: opacity;
+  /* Removed CSS transition - GSAP handles all transitions */
+}
+
+/* First video starts visible */
+.video-homepage__video:first-of-type {
+  opacity: 1;
+  z-index: 3;
+}
+
+/* =========================
+   TEXT OVERLAY
+   ========================= */
+.video-homepage__overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.video-homepage__title {
+  font-family: "MADE Mirage", serif;
+  font-size: 64px !important;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.video-homepage__content {
+  margin-top: 30px;
+}
+
+.video-homepage__text {
+  font-family: "MADE Mirage, serif" ;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #fff;
+  margin: 8px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.5px;
+}
+
+/* Dark overlay for better text readability */
+.video-homepage__wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .video-homepage__wrapper {
+    height: 92svh; 
+    min-height: 520px;
+    clip-path: polygon(0 4%, 100% 0%, 100% 98%, 0 100%);
+  }
+
+  .video-homepage__overlay {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .video-homepage__title {
+    font-size: 52px;
+    letter-spacing: 5px;
+    margin-bottom: 28px;
+  }
+
+  .video-homepage__text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .video-homepage__wrapper {
+    height: 88svh;
+    min-height: auto;
+    clip-path: polygon(0 3%, 100% 0%, 100% 99%, 0 100%);
+  }
+
+  .video-homepage__overlay {
+    width: 88%;
+    padding: 15px;
+  }
+
+  .video-homepage__title {
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+  }
+
+  .video-homepage__text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+@media (max-width: 480px) {
+
+  .video-homepage__wrapper {
+    height: 85svh;
+    clip-path: polygon(0 2%, 100% 0%, 100% 99.5%, 0 100%);
+  }
+
+  .video-homepage__overlay {
+    width: 92%;
+    padding: 10px;
+  }
+
+  .video-homepage__title {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+
+  .video-homepage__text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
