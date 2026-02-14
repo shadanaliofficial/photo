@@ -128,16 +128,16 @@ export default function Footer() {
       <section className="footerMain">
         <div className="footerMain__container">
           <div className="footerMain__social">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="socialIcon socialIcon--facebook">
+            <a href="https://www.facebook.com/Karthik.Photography" target="_blank" rel="noreferrer" className="socialIcon socialIcon--facebook">
               <FaFacebookF />
             </a>
             <a href={instaUrl} target="_blank" rel="noreferrer" className="socialIcon socialIcon--instagram">
               <FaInstagram />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer" className="socialIcon socialIcon--youtube">
+            <a href="https://www.youtube.com/@karthikphotography1/videos" target="_blank" rel="noreferrer" className="socialIcon socialIcon--youtube">
               <FaYoutube />
             </a>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="socialIcon socialIcon--whatsapp">
+            <a href="https://wa.me/916360742026" target="_blank" rel="noreferrer" className="socialIcon socialIcon--whatsapp">
               <FaWhatsapp />
             </a>
           </div>

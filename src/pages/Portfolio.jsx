@@ -6,24 +6,24 @@ const PortfolioPreview = () => {
   const portfolioData = [
     {
       id: 1,
-      title: "Mukta & Girish",
-      subtitle: "Capturing Eternal Moments: Vidhya & Manish",
+      title: "MUKTA & GIRISH",
+      subtitle: "Capturing Eternal Moments: Mukta & Girish",
       subtitle2: "Enchanting Wedding Celebration",
       image: "/images/wedding1/cover.avif",
       slug: "wedding1"
     },
     {
       id: 2,
-      title: "Deepika & Sandesh",
-      subtitle: "Capturing Eternal Moments: Vidhya & Manish",
+      title: "DEEPIKA & SANDESH",
+      subtitle: "Capturing Eternal Moments: Deepika & Sandesh",
       subtitle2: "Enchanting Wedding Celebration",
       image: "/images/wedding2/cover.avif",
       slug: "wedding2"
     },
     {
       id: 3,
-      title: "Pratibha & Vishwas",
-      subtitle: "Capturing Eternal Moments: Vidhya & Manish",
+      title: "PRATIBHA & VISHWAS",
+      subtitle: "Capturing Eternal Moments: Pratibha & Vishwas",
       subtitle2: "Enchanting Wedding Celebration",
       image: "/images/wedding3/cover.avif",
       slug: "wedding3"

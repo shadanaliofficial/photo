@@ -9,27 +9,27 @@ const WeddingFilms = () => {
   const videos = [
     {
       id: 1,
-      coverImage: '/src/assets/images/video-pictures/1.avif',
+      coverImage: '/images/video-pictures/1.avif',
       vimeoId: '1164325848'
     },
     {
       id: 2,
-      coverImage: '/src/assets/images/video-pictures/2.avif',
+      coverImage: '/images/video-pictures/2.avif',
       vimeoId: '1164325976' // Replace with actual Vimeo ID
     },
     {
       id: 3,
-      coverImage: '/src/assets/images/video-pictures/3.avif',
+      coverImage: '/images/video-pictures/3.avif',
       vimeoId: '1164326211' // Replace with actual Vimeo ID
     },
     {
       id: 4,
-      coverImage: '/src/assets/images/video-pictures/4.avif',
+      coverImage: '/images/video-pictures/4.avif',
       vimeoId: '1164326361' // Replace with actual Vimeo ID
     },
     {
       id: 5,
-      coverImage: '/src/assets/images/video-pictures/5.avif',
+      coverImage: '/images/video-pictures/5.avif',
       vimeoId: '1164326281' // Replace with actual Vimeo ID
     }
   ];

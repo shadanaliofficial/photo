@@ -287,3 +287,86 @@
     margin-left: 28px;
   }
 }
+
+/* =========================
+   FULL MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Hero */
+  .about-hero {
+    height: 30vh;
+    min-height: 220px;
+  }
+
+  .about-hero__title {
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  /* Door Zone */
+  .doorZone {
+    height: 65vh;
+  }
+
+  .doorContent {
+    padding: 80px 20px 0;
+    max-width: 100%;
+  }
+
+  /* About Text */
+  .aboutBlock h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .aboutBlock p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Awards */
+  .awardBlock {
+    padding: 50px 20px 70px;
+  }
+
+  .awardBlock h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .awardBlock img {
+    width: 150px;
+  }
+
+  /* FAQ Section */
+  .faqSection {
+    margin: 100px auto;
+    padding: 0 20px;
+  }
+
+  .faqTitle {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .faqItem h3 {
+    font-size: 22px; /* slightly reduced */
+  }
+
+  .faqArrow {
+    font-size: 14px;
+  }
+
+  .faqItem p {
+    font-size: 16px; /* slightly reduced */
+    margin-left: 24px;
+  }
+
+  .faqItem.open p {
+    max-height: 260px;
+  }
+}
