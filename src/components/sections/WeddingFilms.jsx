@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './WeddingFilms.css';
+import './weddingFilms.css';
 
 const WeddingFilms = () => {
   const [activeVideo, setActiveVideo] = useState(null);
